@@ -1,4 +1,4 @@
-{
+ {
 	"name": "knowthecode/lab-data-store",
 	"type": "wordpress-plugin",
 	"description": "Data Store for centralized, globally available, persistent data, state, and configuration parameters.",
