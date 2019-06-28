@@ -8,6 +8,9 @@ This is the interface of how to interact with the data store:
 
 - Put items into the store: `set`, `put`, `store`, or `add`
 - Read items out of the store: `get`
+- Check if item exists in the store: `exists` or `has`
+    - Give it a key to check
+    - returns `true` if exists; else `false`
 
 ## Internal Functionality and Attributes
 
