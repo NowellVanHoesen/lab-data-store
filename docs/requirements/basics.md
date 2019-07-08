@@ -6,7 +6,12 @@ This document defines the basic attributes and functionality of the data store
 
 This is the interface of how to interact with the data store:
 
-- Put items into the store: `set`, `put`, `store`, or `add`
+- Put an item (by store key) into the store: `set`, `put`, `store`, or `add`
+    - returns `true` if item stored, else returns `false`
+    - avoids overwriting or replacing an existing item
+    - check if key exists
+        - if `false`, stored the item and returns `true`
+        - if `true`, does not store the item and returns `false`
 - Get a copy of the item (by store key) out of the store: `get`
     - Return a copy of the item
     - but the item remains in the store
@@ -16,6 +21,9 @@ This is the interface of how to interact with the data store:
 - Remove a specific item from the store `remove`
     - get the item and return it
     - delete the item and its key from the store
+- Replace a specific item (by store key) in the store: `replace`
+    - if the item exists, replace and return `true`
+    - if the item does not exist, add(insert) the item and return `true` 
 
 
 ## Internal Functionality and Attributes
