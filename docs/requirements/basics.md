@@ -30,6 +30,10 @@ This is the interface of how to interact with the data store:
         - check if the given is_array and existing item is also array
         - if either is not array, return `false`
     - use native built-in PHP function to deeply merge the arrays together, return `true`
+- empty all items currently stored in the store `empty`
+    - Caution: deletes all items in the store
+    - handy in the tests suite, i.e. clean up after each test
+    - releases memory for performance and optimization
 
 ## Internal Functionality and Attributes
 
